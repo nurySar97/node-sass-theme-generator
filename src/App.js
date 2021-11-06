@@ -6,6 +6,7 @@ import Buttons from "./components/Buttons";
 import ButtonsWithOutline from "./components/ButtonsWithOutline";
 import ButtonGroup from "./components/ButtonGroup";
 // https://github.com/thomaspark/bootswatch/tree/v5/dist
+// https://react-bootstrap.github.io/components/navs/
 
 const App = () => {
   return (
