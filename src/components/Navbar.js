@@ -1,4 +1,5 @@
 import React from "react";
+import ChangeTheme from "./ChangeTheme";
 
 const Default = (props) => {
   return (
@@ -21,11 +22,7 @@ const Default = (props) => {
           </button>
           <div className="collapse navbar-collapse" id="navbarColor01">
             <ul className="navbar-nav me-auto">
-              <li className="nav-item">
-                <a className="nav-link" href="components/">
-                  Components
-                </a>
-              </li>
+              <ChangeTheme />
             </ul>
             <form className="d-flex">
               <input
