@@ -1,24 +1,27 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-
-
 import Buttons from "./components/Buttons";
 import ButtonsWithOutline from "./components/ButtonsWithOutline";
 import ButtonGroup from "./components/ButtonGroup";
+import { Allerts, Sidebar } from "./components";
 // https://github.com/thomaspark/bootswatch/tree/v5/dist
 // https://react-bootstrap.github.io/components/navs/
 
 const App = () => {
   return (
-    <div>
-      <Navbar />
-      <div className="container">
-        <div className="container p-3">
-          <div className="row">
-            <Buttons />
-            <ButtonsWithOutline />
-            <ButtonGroup />
-          </div>
+    <div className="wrapper">
+      <div className="sidebar">
+        <Sidebar />
+      </div>
+      <div className="main">
+        <div className="navigation">
+          <Navbar />
+        </div>
+        <div className="content row">
+          <Allerts />
+          <Buttons />
+          <ButtonsWithOutline />
+          <ButtonGroup />
         </div>
       </div>
     </div>

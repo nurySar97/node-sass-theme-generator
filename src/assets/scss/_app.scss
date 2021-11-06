@@ -1,2 +1,24 @@
 
 @import '2_components/container';
+@import '2_components/prosidebar';
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+.main {
+    width: 100%;
+}
+
+.navigation {
+    width: 100%;
+    height: 72px;
+}
+
+.content {
+    padding: 1rem !important;
+    margin: 0 !important;
+    overflow: auto;
+    height: calc(100% - 72px);
+}
