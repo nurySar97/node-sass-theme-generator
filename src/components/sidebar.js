@@ -9,7 +9,7 @@ import {
 } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
 import { Navbar, NavbarBrand } from "react-bootstrap";
-import { toggleTheme } from "../services/themeService";
+import { sleep, toggleTheme } from "../services/themeService";
 
 const themes = [
   "default",
@@ -41,7 +41,13 @@ const themes = [
 ];
 
 const Default = () => {
-  const { isSidebarOpen, toggleSidebar } = useStore();
+  const { isSidebarOpen, toggleSidebar, setIsThemeFetching } = useStore();
+  const setThemeAsync = async (theme) => {
+    setIsThemeFetching(true);
+    await sleep(500);
+    await toggleTheme(theme);
+    setIsThemeFetching(false);
+  };
   return (
     <ProSidebar
       toggled={isSidebarOpen}
@@ -57,9 +63,13 @@ const Default = () => {
       </SidebarHeader>
 
       <Menu className="bg-dark p-0" iconShape="circle">
-        <SubMenu title="Components" icon={"fa"}>
+        <SubMenu title="Themes" icon={"fa"}>
           {themes.map((theme) => (
-            <MenuItem key={theme} onClick={() => toggleTheme(theme)}>
+            <MenuItem
+              className="text-capitalize"
+              key={theme}
+              onClick={() => setThemeAsync(theme)}
+            >
               {theme}
             </MenuItem>
           ))}

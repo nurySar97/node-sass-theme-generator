@@ -3,6 +3,8 @@ export function toggleTheme(name = "default") {
   insertStylesheet(name);
 }
 
+export const sleep = (t) => new Promise((resolve) => setTimeout(resolve, t));
+
 function removePrev() {
   const link = document.getElementById("theme-link");
   link.remove();

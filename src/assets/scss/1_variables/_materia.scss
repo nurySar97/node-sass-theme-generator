@@ -40,15 +40,9 @@ $light: $gray-100 !default;
 $dark: $gray-800 !default;
 
 $min-contrast-ratio: 2.15 !default;
-
-$enable-gradients: true !default;
-
 // Body
-
 $body-color: $gray-700 !default;
-
 // Fonts
-
 // stylelint-disable-next-line value-keyword-case
 $font-family-sans-serif: Roboto,
 -apple-system,
@@ -57,47 +51,22 @@ BlinkMacSystemFont,
 "Helvetica Neue",
 Arial,
 sans-serif !default;
-
-
-
-
 // Forms
 
-$input-bg: transparent !default;
-$input-disabled-bg: transparent !default;
 $input-color: $gray-600 !default;
-$input-border-color: transparent !default;
-$input-border-width: 0 !default;
-$input-border-radius: 0 !default;
-$input-border-radius-lg: 0 !default;
-$input-border-radius-sm: 0 !default;
 $input-placeholder-color: rgba(0, 0, 0, .4) !default;
 $input-group-addon-bg: transparent !default;
-
 // Navs
-
 $nav-link-disabled-color: $gray-500 !default;
 $nav-tabs-border-color: transparent !default;
-
 // Navbar
-
-$navbar-dark-color: rgba($white, .75) !default;
 $navbar-dark-hover-color: $white !default;
-
 // Cards
-
 $card-border-width: 0 !default;
 $card-border-color: transparent !default;
-
 // Tooltips
-
 $tooltip-bg: $gray-700 !default;
-
 // Modals
-
 $modal-content-border-color: transparent !default;
-
-
 // Close
-
 $btn-close-color: $white !default;
