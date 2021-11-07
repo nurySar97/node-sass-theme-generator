@@ -1,4 +1,5 @@
-import Allerts from "./allerts";
 import Sidebar from "./sidebar";
+import ChangeTheme from "./change-theme";
+import Navbar from "./navbar";
 
-export { Sidebar, Allerts };
+export { Sidebar, ChangeTheme, Navbar };

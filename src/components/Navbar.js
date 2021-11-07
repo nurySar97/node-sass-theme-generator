@@ -1,6 +1,6 @@
 import React from "react";
 import { useStore } from "../hooks";
-import ChangeTheme from "./ChangeTheme";
+import ChangeTheme from "./change-theme";
 
 const Default = (props) => {
   const { toggleSidebar } = useStore();

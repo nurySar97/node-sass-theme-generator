@@ -18,15 +18,17 @@ const Default = () => {
       onToggle={toggleSidebar}
       breakPoint={"lg"}
     >
-      <SidebarHeader>
+      <SidebarHeader className="bg-primary border-0">
         <Navbar>
-          <NavbarBrand className="w-100 m-0 text-center text-light">
+          <NavbarBrand className="w-100 text-center text-light m-0">
             React-bootstrap template
           </NavbarBrand>
         </Navbar>
       </SidebarHeader>
-      <Menu className="bg-dark p-0" iconShape="square">
+
+      <Menu className="bg-dark p-0" iconShape="circle">
         <MenuItem icon={"123"}>Dashboard</MenuItem>
+
         <SubMenu title="Components" icon={"fa"}>
           <MenuItem>Component 1</MenuItem>
           <MenuItem>Component 2</MenuItem>
