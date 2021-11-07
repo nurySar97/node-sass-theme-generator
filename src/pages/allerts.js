@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import {Alert, Button, Col } from "react-bootstrap";
+import { Alert, Button, Col } from "react-bootstrap";
 
 const Default = () => {
   const [show, setShow] = useState(false);
   return (
     <React.Fragment>
-      <Col lg='6'>
+      <Col lg="6">
         <h2 className="h2">Allert</h2>
         {[
           "primary",
@@ -23,7 +23,7 @@ const Default = () => {
         ))}
       </Col>
 
-      <Col lg='6'>
+      <Col lg="6">
         <h2 className="h2">Links</h2>
         {[
           "primary",
@@ -42,8 +42,8 @@ const Default = () => {
           </Alert>
         ))}
       </Col>
-      
-      <Col lg='12'>
+
+      <Col lg="12">
         <h2>Additional content</h2>
         <Alert variant="success">
           <Alert.Heading>Hey, nice to see you</Alert.Heading>
@@ -60,7 +60,7 @@ const Default = () => {
         </Alert>
       </Col>
 
-      <Col lg='12'>
+      <Col lg="12">
         <h2 className="h2">Dismissing</h2>
         {show ? (
           <Alert variant="danger" onClose={() => setShow(false)} dismissible>

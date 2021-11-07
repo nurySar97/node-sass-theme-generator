@@ -4,6 +4,7 @@ import { Navbar, Preloader, Sidebar } from "./components";
 import { useStore } from "./hooks";
 import Route from "./routes";
 import { insertTheme } from "./services";
+import { THEMES } from "./template.data";
 
 // https://github.com/thomaspark/bootswatch/tree/v5/dist
 // https://react-bootstrap.github.io/components/navs/
@@ -13,7 +14,7 @@ const App = () => {
   useLayoutEffect(() => {
     void (async function () {
       const theme = localStorage.getItem("theme");
-      if (!theme) {
+      if (!theme || !THEMES.includes(theme)) {
         localStorage.setItem("theme", "default");
         return await insertTheme("default", setIsThemeFetching);
       }
@@ -29,12 +30,16 @@ const App = () => {
             <Sidebar />
           </div>
           <div className="body">
-            <div className="navigation">
-              <Navbar />
+            <div className="body__inner">
+              <div className="navigation">
+                <Navbar />
+              </div>
+              <div className="content">
+                <Row>
+                  <Route />
+                </Row>
+              </div>
             </div>
-            <Row className="content">
-              <Route />
-            </Row>
           </div>
         </div>
       </div>

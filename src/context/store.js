@@ -10,6 +10,7 @@ const Default = (props) => {
     <StoreContext.Provider
       value={{
         toggleSidebar: () => setIsSidebarOpen((prev) => !prev),
+        setIsSidebarOpen,
         isSidebarOpen,
         isThemeFetching,
         setIsThemeFetching,

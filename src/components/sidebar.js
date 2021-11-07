@@ -14,11 +14,13 @@ import { pages, THEMES } from "../template.data";
 import { NavLink } from "react-router-dom";
 
 const Default = () => {
-  const { isSidebarOpen, toggleSidebar, setIsThemeFetching } = useStore();
+  const { isSidebarOpen, toggleSidebar, setIsThemeFetching,setIsSidebarOpen } = useStore();
   const currentTheme = localStorage.getItem("theme");
 
   const setThemeAsync = async (theme) => {
+    setIsSidebarOpen(false)
     await setTheme(theme, setIsThemeFetching);
+    
   };
   return (
     <ProSidebar
@@ -35,7 +37,7 @@ const Default = () => {
       </SidebarHeader>
 
       <Menu className="bg-dark p-0" iconShape="circle">
-        <SubMenu title="Themes" icon={"fa"}>
+        <SubMenu title="Themes" icon={"T"}>
           {THEMES.map((theme) => (
             <MenuItem
               active={theme === currentTheme}
@@ -47,10 +49,10 @@ const Default = () => {
           ))}
         </SubMenu>
 
-        <SubMenu title="Components" icon={"fa"}>
+        <SubMenu title="Components" icon={"C"}>
           {pages.map((page) => {
             return (
-              <MenuItem className="text-capitalize" key={page}>
+              <MenuItem className="text-capitalize" key={page} onClick={toggleSidebar}>
                 <NavLink to={`/${page}`}>{page}</NavLink>
               </MenuItem>
             );

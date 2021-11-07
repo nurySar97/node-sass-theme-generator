@@ -13,14 +13,19 @@ body {
 .main {
     width: 100%;
     display: flex;
-    height: stretch;
+    height: -webkit-fill-available;
 }
 
 .body {
+    width: 100%;
+    display: flex;
+}
+
+.body__inner {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: stretch;
+    height: -webkit-fill-available;
 }
 
 .navigation {
@@ -61,4 +66,11 @@ body {
 
 .react-slidedown {
     background-color: lighten($dark, 30%) !important;
+}
+
+.component {
+    width: 100%;
+    padding: 1rem;
+    border: .2rem solid $secondary;
+    border-radius: .2rem;
 }
