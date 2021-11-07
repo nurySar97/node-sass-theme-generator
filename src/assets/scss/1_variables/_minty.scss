@@ -64,29 +64,20 @@ Roboto,
 Arial,
 sans-serif !default;
 $headings-color: $gray-700 !default;
-
 // Tables
-
 $table-border-color: rgba(0, 0, 0, .05) !default;
-
 $table-bg-scale: 0 !default;
-
 // Dropdowns
-
 $dropdown-link-hover-color: $white !default;
 $dropdown-link-hover-bg: $secondary !default;
-
 // Navbar
-
 $navbar-dark-color: rgba($white, .6) !default;
 $navbar-dark-hover-color: $white !default;
 $navbar-light-color: rgba($black, .3) !default;
 $navbar-light-hover-color: $gray-700 !default;
 $navbar-light-active-color: $gray-700 !default;
 $navbar-light-disabled-color: rgba($black, .1) !default;
-
 // Pagination
-
 $pagination-color: $white !default;
 $pagination-bg: $primary !default;
 $pagination-border-color: $primary !default;
@@ -98,16 +89,10 @@ $pagination-active-border-color: $pagination-active-bg !default;
 $pagination-disabled-color: $white !default;
 $pagination-disabled-bg: #cce8e0 !default;
 $pagination-disabled-border-color: $pagination-disabled-bg !default;
-
 // Alerts
-
 $alert-color-scale: 0% !default;
 $alert-bg-scale: 0 !default;
-
 // Breadcrumbs
-
-$breadcrumb-padding-y: .375rem !default;
-$breadcrumb-padding-x: .75rem !default;
 $breadcrumb-bg: $primary !default;
 $breadcrumb-divider-color: $white !default;
 $breadcrumb-active-color: $breadcrumb-divider-color !default;

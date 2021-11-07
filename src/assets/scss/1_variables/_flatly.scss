@@ -59,9 +59,6 @@ sans-serif,
 "Apple Color Emoji",
 "Segoe UI Emoji",
 "Segoe UI Symbol" !default;
-$h1-font-size: 3rem !default;
-$h2-font-size: 2.5rem !default;
-$h3-font-size: 2rem !default;
 
 // Tables
 
@@ -74,9 +71,6 @@ $dropdown-link-hover-color: $white !default;
 $dropdown-link-hover-bg: $primary !default;
 
 // Navs
-
-$nav-link-padding-y: .5rem !default !default;
-$nav-link-padding-x: 2rem !default;
 $nav-link-disabled-color: $gray-600 !default !default;
 $nav-tabs-border-color: $gray-200 !default;
 
@@ -112,12 +106,9 @@ $list-group-disabled-bg: $gray-200 !default;
 
 // Breadcrumbs
 
-$breadcrumb-padding-y: .375rem !default;
-$breadcrumb-padding-x: .75rem !default;
 $breadcrumb-border-radius: .25rem !default;
 
 // Close
 
 $btn-close-color: $white !default;
-$btn-close-opacity: .4 !default;
 $btn-close-hover-opacity: 1 !default;

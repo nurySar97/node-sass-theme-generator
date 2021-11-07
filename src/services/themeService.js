@@ -1,20 +1,19 @@
-export function toggleTheme(name) {
-  detachStylesheets();
+export function toggleTheme(name = "default") {
+  removePrev();
   insertStylesheet(name);
 }
 
-function detachStylesheets() {
-  Array.from(document.querySelectorAll('link[rel="stylesheet"]')).forEach(
-    style => {
-      style.parentNode.removeChild(style);
-    }
-  );
+function removePrev() {
+  const link = document.getElementById("theme-link");
+  link.remove();
 }
 
 function insertStylesheet(name) {
-  var link = document.createElement("link");
-  link.href = "/css/" + name + ".css";
-  link.type = "text/css";
-  link.rel = "stylesheet";
-  document.getElementsByTagName("head")[0].appendChild(link);
+  return new Promise((resolve) => {
+    var link = document.createElement("link");
+    link.setAttribute("href", `/css/${name}.css`);
+    link.setAttribute("rel", "stylesheet");
+    link.setAttribute("id", "theme-link");
+    resolve(link);
+  }).then((link) => document.getElementsByTagName("head")[0].appendChild(link));
 }

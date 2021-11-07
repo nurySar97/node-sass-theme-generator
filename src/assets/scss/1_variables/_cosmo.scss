@@ -39,8 +39,6 @@ $danger: $red !default;
 $light: $gray-100 !default;
 $dark: $gray-800 !default;
 
-$min-contrast-ratio: 2.6 !default;
-
 // Options
 
 $enable-rounded: false !default;
@@ -69,11 +67,3 @@ $headings-font-weight: 400 !default;
 
 $navbar-dark-hover-color: rgba($white, 1) !default;
 $navbar-light-hover-color: rgba($black, .9) !default;
-
-// Alerts
-
-$alert-border-width: 0 !default;
-
-// Progress bars
-
-$progress-height: .5rem !default;

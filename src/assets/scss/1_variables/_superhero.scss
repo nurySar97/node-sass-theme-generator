@@ -46,12 +46,6 @@ $min-contrast-ratio: 1.6 !default;
 $body-bg: #0f2537 !default;
 $body-color: $gray-100 !default;
 
-// Components
-
-$border-radius: 0 !default;
-$border-radius-lg: 0 !default;
-$border-radius-sm: 0 !default;
-
 // Fonts
 
 // stylelint-disable-next-line value-keyword-case
@@ -168,9 +162,6 @@ $list-group-action-color: $white !default;
 $list-group-action-hover-color: $white !default;
 
 // Breadcrumbs
-
-$breadcrumb-padding-y: .375rem !default;
-$breadcrumb-padding-x: .75rem !default;
 $breadcrumb-bg: $gray-200 !default;
 $breadcrumb-divider-color: $body-color !default;
 $breadcrumb-active-color: $body-color !default;

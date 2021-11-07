@@ -9,6 +9,36 @@ import {
 } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
 import { Navbar, NavbarBrand } from "react-bootstrap";
+import { toggleTheme } from "../services/themeService";
+
+const themes = [
+  "default",
+  "cerulean",
+  "cosmo",
+  "cyborg",
+  "darkly",
+  "flatly",
+  "journal",
+  "litera",
+  "lumen",
+  "lux",
+  "materia",
+  "minty",
+  "morph",
+  "pulse",
+  "quartz",
+  "sandstone",
+  "simplex",
+  "sketchy",
+  "slate",
+  "solar",
+  "spacelab",
+  "superhero",
+  "united",
+  "vapor",
+  "yeti",
+  "zephyr",
+];
 
 const Default = () => {
   const { isSidebarOpen, toggleSidebar } = useStore();
@@ -27,7 +57,13 @@ const Default = () => {
       </SidebarHeader>
 
       <Menu className="bg-dark p-0" iconShape="circle">
-        <MenuItem icon={"123"}>Dashboard</MenuItem>
+        <SubMenu title="Components" icon={"fa"}>
+          {themes.map((theme) => (
+            <MenuItem key={theme} onClick={() => toggleTheme(theme)}>
+              {theme}
+            </MenuItem>
+          ))}
+        </SubMenu>
 
         <SubMenu title="Components" icon={"fa"}>
           <MenuItem>Component 1</MenuItem>

@@ -41,9 +41,6 @@ $dark: $gray-900 !default;
 
 $min-contrast-ratio: 1.5 !default;
 
-// Spacing
-
-$spacer: 2rem !default;
 
 // Body
 
@@ -58,18 +55,12 @@ $link-color: $white !default;
 
 $border-color: rgba($white, .2) !default;
 
-$border-radius: .5rem !default;
-$border-radius-sm: .6rem !default;
-$border-radius-lg: .7rem !default;
-$border-radius-pill: 50rem !default;
+
 
 $box-shadow: 1px 3px 24px -1px rgba($black, .15) !default;
 $box-shadow-sm: 0 1px 1px rgba($black, .1) !default;
 
 // Fonts
-
-$headings-font-weight: 700 !default;
-
 $text-muted: rgba($white, .7) !default;
 
 $blockquote-footer-color: $text-muted !default;
@@ -80,11 +71,6 @@ $table-dark-bg: $dark !default;
 $table-dark-border-color: darken($dark, 5%) !default;
 
 $table-bg-scale: 0 !default;
-
-// Buttons + Forms
-
-$input-btn-padding-y: .75rem !default;
-$input-btn-padding-x: 1.5rem !default;
 
 // Buttons
 
@@ -128,8 +114,6 @@ $nav-tabs-border-radius: 0 !default;
 $nav-tabs-link-active-color: $gray-800 !default;
 $nav-tabs-link-active-bg: $white !default;
 $nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg !default;
-
-$nav-pills-border-radius: $border-radius-pill !default;
 $nav-pills-link-active-color: $white !default;
 $nav-pills-link-active-bg: $primary !default;
 
@@ -165,9 +149,6 @@ $pagination-disabled-color: $text-muted !default;
 $pagination-disabled-bg: $pagination-bg !default;
 
 // Cards
-
-$card-spacer-y: 1.75rem !default;
-$card-spacer-x: 2rem !default;
 $card-border-color: $border-color !default;
 $card-cap-bg: transparent !default;
 $card-cap-color: $white !default;
@@ -180,16 +161,11 @@ $accordion-button-bg: $secondary !default;
 $accordion-button-active-bg: $primary !default;
 $accordion-button-active-color: $white !default;
 
-// Tooltips
-
-$tooltip-opacity: .7 !default;
-
 // Popovers
 
 $popover-header-bg: $card-cap-bg !default;
 
 $popover-body-color: $card-color !default;
-$popover-body-padding-y: $spacer * .5 !default;
 
 $popover-arrow-color: $border-color !default;
 
