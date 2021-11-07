@@ -6,9 +6,6 @@ import Route from "./routes";
 import { insertTheme } from "./services";
 import { THEMES } from "./template.data";
 
-// https://github.com/thomaspark/bootswatch/tree/v5/dist
-// https://react-bootstrap.github.io/components/navs/
-
 const App = () => {
   const { setIsThemeFetching } = useStore();
   useLayoutEffect(() => {

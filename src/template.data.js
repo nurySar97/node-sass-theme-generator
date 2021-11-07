@@ -40,7 +40,6 @@ export const pages = [
   "dropdowns",
   "figures",
   "forms",
-  "home",
   "images",
   "input-groups",
   "modals",
