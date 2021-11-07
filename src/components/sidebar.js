@@ -9,44 +9,15 @@ import {
 } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
 import { Navbar, NavbarBrand } from "react-bootstrap";
-import { sleep, toggleTheme } from "../services/themeService";
-
-const themes = [
-  "default",
-  "cerulean",
-  "cosmo",
-  "cyborg",
-  "darkly",
-  "flatly",
-  "journal",
-  "litera",
-  "lumen",
-  "lux",
-  "materia",
-  "minty",
-  "morph",
-  "pulse",
-  "quartz",
-  "sandstone",
-  "simplex",
-  "sketchy",
-  "slate",
-  "solar",
-  "spacelab",
-  "superhero",
-  "united",
-  "vapor",
-  "yeti",
-  "zephyr",
-];
+import { setTheme } from "../services";
+import { THEMES } from "../template.data";
 
 const Default = () => {
   const { isSidebarOpen, toggleSidebar, setIsThemeFetching } = useStore();
+  const currentTheme = localStorage.getItem("theme");
+
   const setThemeAsync = async (theme) => {
-    setIsThemeFetching(true);
-    await sleep(500);
-    await toggleTheme(theme);
-    setIsThemeFetching(false);
+    await setTheme(theme, setIsThemeFetching);
   };
   return (
     <ProSidebar
@@ -64,14 +35,14 @@ const Default = () => {
 
       <Menu className="bg-dark p-0" iconShape="circle">
         <SubMenu title="Themes" icon={"fa"}>
-          {themes.map((theme) => (
+          {THEMES.map((theme) => (
             <MenuItem
+              active={theme === currentTheme}
               className="text-capitalize"
               key={theme}
               onClick={() => setThemeAsync(theme)}
-            >
-              {theme}
-            </MenuItem>
+              children={theme}
+            />
           ))}
         </SubMenu>
 

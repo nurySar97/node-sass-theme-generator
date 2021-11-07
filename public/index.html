@@ -7,69 +7,10 @@
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Web site created using create-react-app" />
   <title>React App</title>
-  <link id="theme-link" rel="stylesheet" href="./css/default.css">
   <style>
-    @keyframes rotate {
-      0% {
-        transform: rotate(0deg);
-      }
-
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
-    @keyframes rotateIncrease {
-      0% {
-        transform: rotate(360deg);
-      }
-
-      50% {
-        transform: rotate(0);
-      }
-
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
-    .preloader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #212529;
-      z-index: 2;
-    }
-
-    .spinner {
+    .wrapper {
       position: relative;
-      width: 200px;
-      height: 200px;
-      background: #6610f2;
-      border-radius: 50%;
-      border: 10px solid rgb(248, 223, 223);
-      border-top-color: #0d6efd;
-      border-bottom-color: #0d6efd;
-      animation: rotate 6s linear infinite;
-    }
-
-    .spinner__inner {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: white;
-      border-radius: 50%;
-      border: 10px solid white;
-      border-left-color: #dc3545;
-      border-right-color: #0dcaf0;
-      animation: rotate 10s linear infinite;
+      z-index: 0;
     }
   </style>
 </head>
