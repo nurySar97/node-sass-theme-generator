@@ -4,7 +4,9 @@ import { Col } from "react-bootstrap";
 const Default = () => {
   return (
     <React.Fragment>
-      <Col lg='12'></Col>
+      <Col lg='12'>
+        Hello From Badges
+      </Col>
     </React.Fragment>
   );
 };

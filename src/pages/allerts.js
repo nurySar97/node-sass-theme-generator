@@ -1,6 +1,5 @@
-import { Button, Col } from "react-bootstrap";
 import React, { useState } from "react";
-import { Alert } from "react-bootstrap";
+import {Alert, Button, Col } from "react-bootstrap";
 
 const Default = () => {
   const [show, setShow] = useState(false);

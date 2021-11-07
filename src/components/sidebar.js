@@ -10,7 +10,8 @@ import {
 import "react-pro-sidebar/dist/css/styles.css";
 import { Navbar, NavbarBrand } from "react-bootstrap";
 import { setTheme } from "../services";
-import { THEMES } from "../template.data";
+import { pages, THEMES } from "../template.data";
+import { NavLink } from "react-router-dom";
 
 const Default = () => {
   const { isSidebarOpen, toggleSidebar, setIsThemeFetching } = useStore();
@@ -47,8 +48,13 @@ const Default = () => {
         </SubMenu>
 
         <SubMenu title="Components" icon={"fa"}>
-          <MenuItem>Component 1</MenuItem>
-          <MenuItem>Component 2</MenuItem>
+          {pages.map((page) => {
+            return (
+              <MenuItem className="text-capitalize" key={page}>
+                <NavLink to={`/${page}`}>{page}</NavLink>
+              </MenuItem>
+            );
+          })}
         </SubMenu>
       </Menu>
     </ProSidebar>
