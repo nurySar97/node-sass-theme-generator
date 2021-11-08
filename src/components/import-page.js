@@ -14,10 +14,9 @@ const Default = ({ name }) => {
         return (
           <Fade name={name}>
             <Row>
-              <Col className="bg-secondary p-3 rounded-3" lg="12">
-                <h1 className="h1 text-capitalize text-info">{name}</h1>
+              <Col className="bg-primary p-3 rounded-3" lg="12">
+                <h1 className="h1 text-capitalize text-light">{name}</h1>
               </Col>
-
               <Page />
             </Row>
           </Fade>

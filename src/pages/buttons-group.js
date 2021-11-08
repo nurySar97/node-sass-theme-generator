@@ -13,7 +13,7 @@ import {
 const Default = () => {
   return (
     <React.Fragment>
-      <Col className="p-3" lg="12">
+      <Col className="p-3" lg="6">
         <div className="component">
           <h2 className="h2">Basic button groups</h2>
           <ButtonGroup aria-label="Basic example">
@@ -24,7 +24,7 @@ const Default = () => {
         </div>
       </Col>
 
-      <Col className="p-3" lg="12">
+      <Col className="p-3" lg="6">
         <div className="component">
           <h2 className="h2">Button groups toolbar</h2>
           <ButtonToolbar aria-label="Toolbar with button groups">
@@ -42,7 +42,7 @@ const Default = () => {
         </div>
       </Col>
 
-      <Col className="p-3" lg="12">
+      <Col className="p-3" lg="6">
         <div className="component">
           <h2 className="h2">Mix input groups with button groups</h2>
           <ButtonToolbar
@@ -89,7 +89,7 @@ const Default = () => {
         </div>
       </Col>
 
-      <Col className="p-3" lg="12">
+      <Col className="p-3" lg="6">
         <div className="component">
           <h2 className="h2">Button groups sizing</h2>
           <ButtonGroup size="lg" className="mb-2">
@@ -112,7 +112,7 @@ const Default = () => {
         </div>
       </Col>
 
-      <Col className="p-3" lg="12">
+      <Col className="p-3" lg="6">
         <div className="component">
           <h2 className="h2">Nesting</h2>
           <ButtonGroup>
@@ -131,7 +131,7 @@ const Default = () => {
         </div>
       </Col>
 
-      <Col className="p-3" lg="12">
+      <Col className="p-3" lg="6">
         <div className="component">
           <h2 className="h2">Vertical variation</h2>
           <ButtonGroup vertical>

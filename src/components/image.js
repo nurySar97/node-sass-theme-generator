@@ -2,12 +2,22 @@ import React from "react";
 import styled from "styled-components";
 
 const Default = (props) => {
-  let { iWidth, iHeight, ...rest } = props;
+  let { iWidth, iHeight, iMaxWidth, iMinHeight, ...rest } = props;
   iWidth = iWidth || 100;
   iHeight = iHeight || 100;
+  iMaxWidth = iMaxWidth || iWidth;
+  iMinHeight = iMinHeight || "initial";
   return (
-    <ImageStyled {...rest} {...{ iWidth, iHeight }}>
-      <ImageInnerStyled {...rest} {...{ iWidth, iHeight }} />
+    <ImageStyled
+      className="bg-dark text-light"
+      {...rest}
+      {...{ iWidth, iHeight, iMaxWidth, iMinHeight }}
+    >
+      <ImageInnerStyled
+        className="bg-transparent text-light"
+        {...rest}
+        {...{ iWidth, iHeight, iMaxWidth, iMinHeight }}
+      />
     </ImageStyled>
   );
 };
@@ -16,13 +26,15 @@ export default Default;
 
 const ImageStyled = styled.div`
   width: 100%;
-  max-width: ${({ iWidth }) => iWidth + "px"};
+  max-width: ${({ iMaxWidth }) => iMaxWidth};
+  min-height: (${({ iMinHeight }) => iMinHeight});
 `;
 
 const ImageInnerStyled = styled.div`
   position: relative;
   width: 100%;
-  max-width: ${({ iWidth }) => iWidth + "px"};
+  max-width: ${({ iMaxWidth }) => iMaxWidth};
+  min-height: ${({ iMinHeight }) => iMinHeight};
   padding-top: ${({ iWidth, iHeight }) => (iHeight / iWidth) * 100 + "%"};
 
   &::before {

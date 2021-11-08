@@ -35,7 +35,7 @@ const Default = () => {
   const handleClick = () => setLoading(true);
   return (
     <React.Fragment>
-      <Col className="p-3" lg="12">
+      <Col className="p-3" lg="6">
         <div className="component">
           <h2 className="h2">Basic buttons</h2>
           <Button className="m-3" variant="primary">
@@ -68,7 +68,7 @@ const Default = () => {
         </div>
       </Col>
 
-      <Col className="p-3" lg="12">
+      <Col className="p-3" lg="6">
         <div className="component">
           <h2 className="h2">Outline buttons</h2>
           <Button className="m-3" variant="outline-primary">
@@ -101,7 +101,7 @@ const Default = () => {
         </div>
       </Col>
 
-      <Col className="p-3" lg="12">
+      <Col className="p-3" lg="6">
         <div className="component">
           <h2 className="h2">Button tags</h2>
           <Button className="m-3" href="#">
@@ -116,7 +116,7 @@ const Default = () => {
         </div>
       </Col>
 
-      <Col className="p-3" lg="12">
+      <Col className="p-3" lg="6">
         <div className="component">
           <h2 className="h2">Buttons sizes</h2>
           <Button className="m-3" size="sm">
@@ -137,7 +137,7 @@ const Default = () => {
         </div>
       </Col>
 
-      <Col className="p-3" lg="12">
+      <Col className="p-3" lg="6">
         <div className="component">
           <h2 className="h2">Block buttons</h2>
           <div className="d-grid gap-2">
@@ -160,7 +160,7 @@ const Default = () => {
         </div>
       </Col>
 
-      <Col className="p-3" lg="12">
+      <Col className="p-3" lg="6">
         <div className="component">
           <h2 className="h2">Active state</h2>
           <Button className="m-3" variant="primary" size="lg" active>
@@ -172,7 +172,7 @@ const Default = () => {
         </div>
       </Col>
 
-      <Col className="p-3" lg="12">
+      <Col className="p-3" lg="6">
         <div className="component">
           <h2 className="h2">Disabled state</h2>
           <Button className="m-3" variant="primary" size="lg" disabled>
@@ -184,7 +184,7 @@ const Default = () => {
         </div>
       </Col>
 
-      <Col className="p-3" lg="12">
+      <Col className="p-3" lg="6">
         <div className="component">
           <h2 className="h2">Button loading state</h2>
           <Button
@@ -197,7 +197,7 @@ const Default = () => {
         </div>
       </Col>
 
-      <Col className="p-3" lg="12">
+      <Col className="p-3" lg="6">
         <div className="component">
           <h2 className="h2">Checkbox / Radio</h2>
           <ButtonGroup className="mb-2">
@@ -261,7 +261,7 @@ const Default = () => {
         </div>
       </Col>
 
-      <Col className="p-3" lg="12">
+      <Col className="p-3" lg="6">
         <div className="component">
           <h2 className="h2">Uncontrolled</h2>
           <ToggleButtonGroup
@@ -294,7 +294,7 @@ const Default = () => {
         </div>
       </Col>
 
-      <Col className="p-3" lg="12">
+      <Col className="p-3" lg="6">
         <div className="component">
           <h2 className="h2">Controlled</h2>
           <ToggleButtonGroup
