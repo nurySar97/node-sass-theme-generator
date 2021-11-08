@@ -12,6 +12,7 @@ import { Navbar, NavbarBrand } from "react-bootstrap";
 import { setTheme } from "../services";
 import { pages, themes } from "../template.data";
 import { Link, useLocation } from "react-router-dom";
+import ReactBootstrap from "./../assets/images/reactbootstrap.svg";
 
 const Default = () => {
   const { pathname } = useLocation();
@@ -32,7 +33,8 @@ const Default = () => {
       <SidebarHeader className="bg-primary border-0">
         <Navbar>
           <NavbarBrand className="w-100 text-center text-light m-0">
-            React-bootstrap template
+            <img src={ReactBootstrap} alt='react-bootstrap' style={{ width: "40px" }} />{" "}
+            React-Bootstrap
           </NavbarBrand>
         </Navbar>
       </SidebarHeader>
