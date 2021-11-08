@@ -1,5 +1,4 @@
 import React, { useLayoutEffect } from "react";
-import { Row } from "react-bootstrap";
 import { Navbar, Preloader, Sidebar } from "./components";
 import { useStore } from "./hooks";
 import Route from "./routes";
@@ -8,6 +7,7 @@ import { THEMES } from "./template.data";
 
 const App = () => {
   const { setIsThemeFetching } = useStore();
+
   useLayoutEffect(() => {
     void (async function () {
       const theme = localStorage.getItem("theme");
@@ -32,9 +32,7 @@ const App = () => {
                 <Navbar />
               </div>
               <div className="content">
-                <Row>
-                  <Route />
-                </Row>
+                <Route />
               </div>
             </div>
           </div>
