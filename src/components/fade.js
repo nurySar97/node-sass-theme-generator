@@ -15,8 +15,9 @@ export default Default;
 
 const FadeStyled = styled.div`
   position: relative;
-  transform: ${({ isReady }) => `translateY(${isReady ? "0" : "-100px"})`};
+  top: ${({ isReady }) => `${isReady ? "0" : "-35px"}`};
+  /* transform: ${({ isReady }) => `translateY(${isReady ? "0" : "-35px"})`}; */
   will-change: all;
-  opacity: ${({ isReady }) => (isReady ? 1 : 0)};
+  opacity: ${({ isReady }) => (isReady ? 1 : .2)};
   transition: all ${({ isReady }) => (isReady ? ".5s" : "0s")} ease-out;
 `;
