@@ -1,0 +1,2 @@
+(this["webpackJsonpnode-sass-theme-generator"]=this["webpackJsonpnode-sass-theme-generator"]||[]).push([[20],{103:function(e,s,t){"use strict";t.r(s);var n=t(0),a=t.n(n),r=t(134),c=t(1);s.default=function(){return Object(c.jsx)(a.a.Fragment,{children:Object(c.jsx)(r.a,{lg:"12"})})}}}]);
+//# sourceMappingURL=20.1dab9dc4.chunk.js.map
