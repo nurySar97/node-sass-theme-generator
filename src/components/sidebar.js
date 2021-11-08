@@ -10,7 +10,7 @@ import {
 import "react-pro-sidebar/dist/css/styles.css";
 import { Navbar, NavbarBrand } from "react-bootstrap";
 import { setTheme } from "../services";
-import { pages, THEMES } from "../template.data";
+import { pages, themes } from "../template.data";
 import { Link, useLocation } from "react-router-dom";
 
 const Default = () => {
@@ -39,7 +39,7 @@ const Default = () => {
 
       <Menu className="bg-dark p-0" iconShape="circle">
         <SubMenu title="Themes" icon={"T"}>
-          {THEMES.map((theme) => (
+          {themes.map((theme) => (
             <MenuItem
               active={theme === currentTheme}
               className="text-capitalize"

@@ -1,4 +1,4 @@
-export const THEMES = [
+export const themes = [
   "default",
   "cerulean",
   "cosmo",

@@ -41,7 +41,7 @@ const Default = () => {
       <Col className="p-3" lg="6">
         <div className="component">
           <h2 className="h2">Contextual variations</h2>
-          <div>
+          <div className='p-3'>
             <Badge bg="primary">Primary</Badge>{" "}
             <Badge bg="secondary">Secondary</Badge>{" "}
             <Badge bg="success">Success</Badge>{" "}
@@ -61,7 +61,7 @@ const Default = () => {
       <Col className="p-3" lg="6">
         <div className="component">
           <h2 className="h2">Pill</h2>
-          <div>
+          <div className='p-3'>
             <Badge pill bg="primary">
               Primary
             </Badge>{" "}

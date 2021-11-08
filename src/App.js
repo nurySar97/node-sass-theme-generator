@@ -3,7 +3,7 @@ import { Navbar, Preloader, Sidebar } from "./components";
 import { useStore } from "./hooks";
 import Route from "./routes";
 import { insertTheme } from "./services";
-import { THEMES } from "./template.data";
+import { themes } from "./template.data";
 
 const App = () => {
   const { setIsThemeFetching } = useStore();
@@ -11,7 +11,7 @@ const App = () => {
   useLayoutEffect(() => {
     void (async function () {
       const theme = localStorage.getItem("theme");
-      if (!theme || !THEMES.includes(theme)) {
+      if (!theme || !themes.includes(theme)) {
         localStorage.setItem("theme", "default");
         return await insertTheme("default", setIsThemeFetching);
       }

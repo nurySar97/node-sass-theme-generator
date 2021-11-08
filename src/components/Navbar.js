@@ -1,42 +1,118 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Container, FormControl, Navbar, Dropdown } from "react-bootstrap";
+import { Link, useLocation } from "react-router-dom";
 import { useStore } from "../hooks";
+import { setTheme } from "../services";
+import { themes, pages } from "./../template.data";
+import styled from "styled-components";
 
-const Default = (props) => {
+const Default = () => {
   const { toggleSidebar } = useStore();
+  const [value, setValue] = useState("");
+  const [items, setItems] = useState({ pages: [], themes: [] });
+  const [isShow, setIsshow] = useState(false);
+  const { setIsThemeFetching } = useStore();
+  const currentTheme = localStorage.getItem("theme");
+  const { pathname } = useLocation();
+
+  const setThemeAsync = async (theme) => {
+    await setTheme(theme, setIsThemeFetching);
+  };
+
+  useEffect(() => {
+    setIsshow(true);
+    setItems(() => ({
+      pages: pages.filter((page) =>
+        value ? page.toLowerCase().includes(value.toLowerCase()) : false
+      ),
+      themes: themes.filter((theme) =>
+        value ? theme.toLowerCase().includes(value.toLowerCase()) : false
+      ),
+    }));
+  }, [value]);
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div className="container-fluid">
-        <a className="navbar-brand" href="/">
-          Navbar
-        </a>
-        <button
+    <Navbar bg="primary" expand="lg">
+      <Container fluid>
+        <DropdownStyled show={isShow} onToggle={setIsshow} align="start">
+          <Dropdown.Toggle
+            id="dropdown-button-dark-example1"
+            variant="secondary"
+            placeholder="Search"
+            as={FormControl}
+            type="input"
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+            onClick={(e) => {
+              e.stopPropagation();
+              setIsshow(true);
+            }}
+          />
+
+          <DropdownMenuStyled variant="dark">
+            <Dropdown.Divider />
+
+            {!!items.pages.length && (
+              <Dropdown.Header>Components</Dropdown.Header>
+            )}
+
+            {items.pages.map((page) => (
+              <Dropdown.Item
+                className={"text-capitalize"}
+                as={Link}
+                key={page}
+                to={`/${page}`}
+                active={pathname === `/${page}`}
+              >
+                {page}
+              </Dropdown.Item>
+            ))}
+
+            {!!items.themes.length && <Dropdown.Header>Themes</Dropdown.Header>}
+
+            {items.themes.map((theme) => {
+              return (
+                <Dropdown.Item
+                  key={theme}
+                  onClick={setThemeAsync.bind(null, theme)}
+                  className={"text-capitalize"}
+                  active={currentTheme === theme}
+                >
+                  {theme}
+                </Dropdown.Item>
+              );
+            })}
+
+            {!!items.themes.length || !!items.pages.length || (
+              <Dropdown.ItemText>No result yet </Dropdown.ItemText>
+            )}
+          </DropdownMenuStyled>
+        </DropdownStyled>
+        <Navbar.Toggle
           onClick={toggleSidebar}
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarColor01"
-          aria-controls="navbarColor01"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon" />
-        </button>
-        <div className="collapse navbar-collapse" id="navbarColor01">
-          <ul className="navbar-nav me-auto">{/* <ChangeTheme /> */}</ul>
-          <form className="d-flex">
-            <input
-              className="form-control me-sm-2"
-              type="text"
-              placeholder="Search"
-            />
-            <button className="btn btn-secondary my-2 my-sm-0" type="submit">
-              Search
-            </button>
-          </form>
-        </div>
-      </div>
-    </nav>
+          aria-controls="basic-navbar-nav"
+        />
+      </Container>
+    </Navbar>
   );
 };
 
 export default Default;
+
+const DropdownStyled = styled(Dropdown)`
+  width: calc(100% - 70px);
+  max-width: 600px;
+`;
+
+const DropdownMenuStyled = styled(Dropdown.Menu)`
+  width: 100%;
+  max-height: 400px;
+  overflow: auto;
+  padding: 1rem !important;
+
+  top: calc(100% - 3px) !important;
+
+  @media (max-width: 991.9px) {
+    width: calc(100% + 70px);
+  }
+`;

@@ -3,7 +3,7 @@ import React, { createContext, useState } from "react";
 export const StoreContext = createContext(null);
 
 const Default = (props) => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isThemeFetching, setIsThemeFetching] = useState(false);
 
   return (
