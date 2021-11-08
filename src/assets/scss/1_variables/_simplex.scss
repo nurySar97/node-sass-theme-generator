@@ -40,13 +40,9 @@ $light: $white !default;
 $dark: $gray-800 !default;
 
 $min-contrast-ratio: 2.8 !default;
-
 // Body
-
 $body-bg: #fcfcfc !default;
-
 // Fonts
-
 // stylelint-disable-next-line value-keyword-case
 $font-family-sans-serif: "Open Sans",
 -apple-system,
@@ -59,49 +55,31 @@ sans-serif,
 "Apple Color Emoji",
 "Segoe UI Emoji",
 "Segoe UI Symbol" !default;
-
 // Dropdowns
-
 $dropdown-link-hover-color: $white !default;
 $dropdown-link-hover-bg: $primary !default;
-
 // Navs
-
 $nav-link-disabled-color: $gray-400 !default;
 $nav-tabs-border-color: darken(#fff, 6.5%) !default;
-
 // Navbar
-
 $navbar-dark-color: rgba($white, .75) !default;
 $navbar-dark-hover-color: $white !default;
-
 // Pagination
-
 $pagination-border-color: $nav-tabs-border-color !default;
 $pagination-hover-color: $white !default;
 $pagination-hover-bg: $primary !default;
 $pagination-hover-border-color: $primary !default;
 $pagination-disabled-color: $gray-400 !default;
 $pagination-disabled-border-color: $pagination-border-color !default;
-
 // Cards
-
 $card-border-color: $nav-tabs-border-color !default;
-
 // Popovers
-
 $popover-border-color: $nav-tabs-border-color !default;
-
 // Modals
-
 $modal-content-border-color: $nav-tabs-border-color !default;
 $modal-header-border-color: $nav-tabs-border-color !default;
-
 // Progress bars
-
 $progress-bar-color: $primary !default;
-
 // List group
-
 $list-group-border-color: $nav-tabs-border-color !default;
 $list-group-disabled-bg: $nav-tabs-border-color !default;

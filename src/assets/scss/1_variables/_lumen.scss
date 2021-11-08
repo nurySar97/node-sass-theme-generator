@@ -37,12 +37,10 @@ $info: $cyan !default;
 $warning: $yellow !default;
 $danger: $red !default;
 $light: $gray-100 !default;
-$dark: $gray-700 !default;
+$dark: darken($gray-700, 10%) !default;
 
 $min-contrast-ratio: 1.75 !default;
-
 // Fonts
-
 // stylelint-disable-next-line value-keyword-case
 $font-family-sans-serif: "Source Sans Pro",
 -apple-system,
@@ -57,26 +55,17 @@ sans-serif,
 "Segoe UI Symbol" !default;
 
 // Tables
-
 $table-bg-scale: 0 !default;
-
 // Buttons
-
 $btn-font-weight: 700 !default;
-
 // Dropdowns
-
 $dropdown-link-color: rgba(0, 0, 0, .5) !default;
-
 // Navs
-
 $nav-tabs-border-color: $gray-200 !default;
 $nav-tabs-link-hover-border-color: $nav-tabs-border-color !default;
 $nav-tabs-link-active-color: $gray-900 !default;
 $nav-tabs-link-active-border-color: $nav-tabs-border-color !default;
-
 // Pagination
-
 $pagination-color: $gray-700 !default;
 $pagination-bg: $gray-200 !default;
 $pagination-hover-color: $pagination-color !default;
@@ -84,17 +73,10 @@ $pagination-hover-bg: $pagination-bg !default;
 $pagination-active-border-color: darken($primary, 5%) !default;
 $pagination-disabled-color: $gray-600 !default;
 $pagination-disabled-bg: $pagination-bg !default;
-
 // Breadcrumbs
-
-
 $breadcrumb-bg: $pagination-bg !default;
 $breadcrumb-border-radius: .25rem !default;
-
 // Modals
-
 $modal-content-border-color: rgba($black, .1) !default;
-
 // Close
-
 $btn-close-color: $white !default;

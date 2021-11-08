@@ -30,8 +30,8 @@ $green: #4bbf73 !default;
 $teal: #20c997 !default;
 $cyan: #1f9bcf !default;
 
-$primary: $gray-900 !default;
-$secondary: $white !default;
+$primary: $gray-600 !default;
+$secondary: $gray-700 !default;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
@@ -40,17 +40,11 @@ $light: $white !default;
 $dark: $gray-800 !default;
 
 $min-contrast-ratio: 2.3 !default;
-
 // Options
-
 $enable-rounded: false !default;
-
 // Body
-
 $body-color: $gray-700 !default;
-
 // Fonts
-
 // stylelint-disable-next-line value-keyword-case
 $font-family-sans-serif: "Nunito Sans",
 -apple-system,
@@ -65,31 +59,22 @@ sans-serif,
 "Segoe UI Symbol" !default;
 $headings-font-weight: 600 !default;
 $headings-color: $gray-900 !default;
-
 // Tables
-
 $table-border-color: rgba(0, 0, 0, .05) !default;
-
 // Buttons + Forms
-
 $input-btn-border-width: 0 !default;
-
 // Buttons
 $btn-font-weight: 600 !default;
-
 // Forms
 $input-bg: $gray-200 !default;
 $input-disabled-bg: $gray-300 !default;
 $input-group-addon-bg: $gray-300 !default;
-
 // Navbar
 $navbar-dark-hover-color: $white !default;
 $navbar-light-color: rgba($black, .3) !default;
 $navbar-light-hover-color: $gray-900 !default;
 $navbar-light-active-color: $gray-900 !default;
-
 // Pagination
-
 $pagination-border-color: transparent !default;
 $pagination-hover-border-color: $pagination-border-color !default;
 $pagination-disabled-border-color: $pagination-border-color !default;

@@ -40,25 +40,14 @@ $light: #44d9e8 !default;
 $dark: $gray-900 !default;
 
 $min-contrast-ratio: 1.2 !default;
-
-// Options
-
-// $enable-rounded:              false !default;
-
 // Body
-
 $body-bg: #1a0933 !default;
 $body-color: $cyan !default;
-
 // Links
-
 $link-color: $body-color !default;
-
 // Components
 $component-active-bg: $pink !default;
-
 // Fonts
-
 // stylelint-disable-next-line value-keyword-case
 $font-family-sans-serif: Lato,
 -apple-system,
@@ -71,86 +60,49 @@ sans-serif,
 "Apple Color Emoji",
 "Segoe UI Emoji",
 "Segoe UI Symbol" !default;
-
 $text-muted: rgba($body-color, .3) !default;
-
 $blockquote-footer-color: $text-muted !default;
-
 // Tables
-
 $table-color: $white !default;
-
 $table-bg-scale: 0 !default;
-
 // Forms
-
 $input-bg: lighten($body-bg, 10%) !default;
 $input-disabled-bg: lighten($body-bg, 5%) !default;
-
 $input-color: $white !default;
-
 $input-placeholder-color: rgba($white, .4) !default;
-
 $input-group-addon-bg: $input-disabled-bg !default;
-
 $form-range-track-bg: $input-bg !default;
-
 $form-range-thumb-disabled-bg: $purple !default;
-
 // Navs
-
 $nav-link-disabled-color: $text-muted !default;
-
 $nav-tabs-link-active-color: $component-active-bg !default;
-
 // Pagination
-
 $pagination-bg: transparent !default;
-
 $pagination-focus-bg: transparent !default;
-
 $pagination-hover-bg: transparent !default;
-
 $pagination-disabled-color: $text-muted !default;
 $pagination-disabled-bg: transparent !default;
-
 // Cards
-
 $card-cap-color: $white !default;
 $card-color: $white !default;
-
 // Tooltips
-
 $tooltip-bg: $dark !default;
 $tooltip-opacity: 1 !default;
-
 // Popovers
-
 $popover-bg: $primary !default;
-
 $popover-header-color: $white !default;
-
 $popover-body-color: $white !default;
-
 // Toasts
-
 $toast-color: $white !default;
 $toast-background-color: $primary !default;
-
 $toast-header-color: $toast-color !default;
 $toast-header-background-color: $toast-background-color !default;
-
 // Modals
-
 $modal-content-color: $white !default;
 $modal-content-bg: $primary !default;
-
 // Progress bars
-
 $progress-bg: $input-disabled-bg !default;
-
 // List group
-
 $list-group-color: $white !default;
 $list-group-bg: $input-disabled-bg !default;
 $list-group-hover-bg: $pink !default;
@@ -158,8 +110,6 @@ $list-group-disabled-color: $text-muted !default;
 $list-group-action-color: $body-color !default;
 $list-group-action-hover-color: $white !default;
 $list-group-action-active-bg: $list-group-hover-bg !default;
-
 // Breadcrumbs
-
 $breadcrumb-divider-color: $text-muted !default;
 $breadcrumb-active-color: $component-active-bg !default;

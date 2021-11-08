@@ -40,13 +40,9 @@ $light: $gray-200 !default;
 $dark: $purple !default;
 
 $min-contrast-ratio: 1.8 !default;
-
 // Body
-
 $body-color: $gray-800 !default;
-
 // Fonts
-
 // stylelint-disable-next-line value-keyword-case
 $font-family-sans-serif: Ubuntu,
 -apple-system,
@@ -59,8 +55,6 @@ sans-serif,
 "Apple Color Emoji",
 "Segoe UI Emoji",
 "Segoe UI Symbol" !default;
-
 // Tables
-
 $table-dark-bg: $dark !default;
 $table-dark-border-color: darken($dark, 5%) !default;
