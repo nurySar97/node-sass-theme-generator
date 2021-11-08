@@ -43,3 +43,4 @@ const App = () => {
 };
 
 export default App;
+// "homepage": "http://nurySar97.github.io/react-bootstrap-template",

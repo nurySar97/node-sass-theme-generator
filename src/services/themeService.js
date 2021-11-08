@@ -6,7 +6,7 @@ export function insertTheme(name, setIsThemeFetching) {
     setIsThemeFetching(() => true);
     await sleep(500);
     const link = document.createElement("link");
-    link.setAttribute("href", `./css/${name}.css`);
+    link.setAttribute("href", `/react-bootstrap-template/css/${name}.css`);
     link.setAttribute("rel", "stylesheet");
     link.setAttribute("id", "theme-link");
     document.head.appendChild(link);

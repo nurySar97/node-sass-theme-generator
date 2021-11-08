@@ -6,7 +6,7 @@ import { StoreProvider } from "./context";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename='/react-bootstrap-template'>
       <StoreProvider>
         <App />
       </StoreProvider>

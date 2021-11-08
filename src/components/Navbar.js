@@ -3,7 +3,7 @@ import { Container, FormControl, Navbar, Dropdown } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 import { useStore } from "../hooks";
 import { setTheme } from "../services";
-import { themes, pages } from "./../template.data";
+import { themes, pages } from "../template.data";
 import styled from "styled-components";
 
 const Default = () => {
