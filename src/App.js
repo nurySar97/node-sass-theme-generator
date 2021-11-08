@@ -12,7 +12,6 @@ const App = () => {
     void (async function () {
       const theme = localStorage.getItem("theme");
       if (!theme || !themes.includes(theme)) {
-        localStorage.setItem("theme", "default");
         return await insertTheme("default", setIsThemeFetching);
       }
       await insertTheme(theme, setIsThemeFetching);

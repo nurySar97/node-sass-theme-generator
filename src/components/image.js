@@ -5,9 +5,10 @@ const Default = (props) => {
   let { iWidth, iHeight, iMaxWidth, iMinHeight, showSize, ...rest } = props;
   iWidth = iWidth || 100;
   iHeight = iHeight || 100;
-  iMaxWidth = iMaxWidth || iWidth;
+  iMaxWidth = iMaxWidth || iWidth || "initial";
   iMinHeight = iMinHeight || "initial";
   showSize = showSize || false;
+  
   return (
     <ImageStyled
       className="bg-dark text-light"

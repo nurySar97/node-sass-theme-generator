@@ -2,20 +2,20 @@ import { useEffect, useState } from "react";
 import { Row, Col, Spinner } from "react-bootstrap";
 import { Fade } from ".";
 
-const Default = ({ name }) => {
+const Default = ({ page }) => {
   const [isFetching, setIsFetching] = useState(true);
   const [Page, setPage] = useState(null);
 
   useEffect(() => {
     void (async function () {
-      const response = await import(`./../pages/${name}`);
-      const Page = response.default;
+      const _Page = await import(`./../pages/${page}`);
+      const Page = _Page.default;
       setPage(() => {
         return (
-          <Fade name={name}>
+          <Fade page={page}>
             <Row>
               <Col className="bg-primary p-3 rounded-3" lg="12">
-                <h1 className="h1 text-capitalize text-light">{name}</h1>
+                <h1 className="h1 text-capitalize text-light">{page}</h1>
               </Col>
               <Page />
             </Row>
@@ -24,7 +24,7 @@ const Default = ({ name }) => {
       });
       setIsFetching(false);
     })();
-  }, [name]);
+  }, [page]);
 
   return isFetching ? (
     <Row>

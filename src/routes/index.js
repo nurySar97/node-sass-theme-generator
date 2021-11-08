@@ -13,7 +13,7 @@ const Default = () => {
           <Route
             key={page}
             path={`/${page}`}
-            element={<ImportPage name={page} />}
+            element={<ImportPage page={page} />}
           />
         );
       })}

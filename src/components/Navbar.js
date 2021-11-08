@@ -20,7 +20,6 @@ const Default = () => {
   };
 
   useEffect(() => {
-    setIsshow(true);
     setItems(() => ({
       pages: pages.filter((page) =>
         value ? page.toLowerCase().includes(value.toLowerCase()) : false
@@ -36,9 +35,8 @@ const Default = () => {
       <Container fluid>
         <DropdownStyled show={isShow} onToggle={setIsshow} align="start">
           <Dropdown.Toggle
-            id="dropdown-button-dark-example1"
             variant="secondary"
-            placeholder="Search"
+            placeholder="Search..."
             as={FormControl}
             type="input"
             value={value}
@@ -48,7 +46,6 @@ const Default = () => {
               setIsshow(true);
             }}
           />
-
           <DropdownMenuStyled variant="dark">
             <Dropdown.Divider />
 
@@ -63,9 +60,8 @@ const Default = () => {
                 key={page}
                 to={`/${page}`}
                 active={pathname === `/${page}`}
-              >
-                {page}
-              </Dropdown.Item>
+                children={page}
+              />
             ))}
 
             {!!items.themes.length && <Dropdown.Header>Themes</Dropdown.Header>}
@@ -77,9 +73,8 @@ const Default = () => {
                   onClick={setThemeAsync.bind(null, theme)}
                   className={"text-capitalize"}
                   active={currentTheme === theme}
-                >
-                  {theme}
-                </Dropdown.Item>
+                  children={theme}
+                />
               );
             })}
 
