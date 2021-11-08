@@ -2,21 +2,22 @@ import React from "react";
 import styled from "styled-components";
 
 const Default = (props) => {
-  let { iWidth, iHeight, iMaxWidth, iMinHeight, ...rest } = props;
+  let { iWidth, iHeight, iMaxWidth, iMinHeight, showSize, ...rest } = props;
   iWidth = iWidth || 100;
   iHeight = iHeight || 100;
   iMaxWidth = iMaxWidth || iWidth;
   iMinHeight = iMinHeight || "initial";
+  showSize = showSize || false;
   return (
     <ImageStyled
       className="bg-dark text-light"
       {...rest}
-      {...{ iWidth, iHeight, iMaxWidth, iMinHeight }}
+      {...{ iMaxWidth, iMinHeight }}
     >
       <ImageInnerStyled
         className="bg-transparent text-light"
         {...rest}
-        {...{ iWidth, iHeight, iMaxWidth, iMinHeight }}
+        {...{ iWidth, iHeight, iMaxWidth, iMinHeight, showSize }}
       />
     </ImageStyled>
   );
@@ -38,7 +39,7 @@ const ImageInnerStyled = styled.div`
   padding-top: ${({ iWidth, iHeight }) => (iHeight / iWidth) * 100 + "%"};
 
   &::before {
-    display: block;
+    display: ${({ showSize }) => (showSize ? "block" : "none")};
     content: "${({ iWidth, iHeight }) => iWidth + "x" + iHeight}";
     color: inherit;
     position: absolute;

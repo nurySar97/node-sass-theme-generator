@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Spinner } from "react-bootstrap";
 import { Fade } from ".";
 
 const Default = ({ name }) => {
@@ -26,7 +26,15 @@ const Default = ({ name }) => {
     })();
   }, [name]);
 
-  return isFetching ? <h1>Hello</h1> : Page;
+  return isFetching ? (
+    <Row>
+      <Col className="text-center" lg="12">
+        <Spinner size='lg' animation="border" variant="primary" />
+      </Col>
+    </Row>
+  ) : (
+    Page
+  );
 };
 
 export default Default;

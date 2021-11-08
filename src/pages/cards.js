@@ -15,9 +15,9 @@ const Default = () => {
     <React.Fragment>
       <Col className="p-3" lg="6">
         <div className="component">
-          <h2 className="h2">Cards basic example</h2>
-          <Card style={{ maxWidth: 286 }}>
-            <Image iWidth={286} iHeight={180} />
+          <h2 className="h2 text-center">Cards basic example</h2>
+          <Card className='mx-auto' style={{ maxWidth: 286 }}>
+            <Image showSize iWidth={286} iHeight={180} />
             <Card.Body>
               <Card.Title>Card Title</Card.Title>
               <Card.Text>
@@ -32,9 +32,9 @@ const Default = () => {
 
       <Col className="p-3" lg="6">
         <div className="component">
-          <h2 className="h2">Kitchen Sink</h2>
-          <Card style={{ maxWidth: 286 }}>
-            <Image iWidth={286} iHeight={180} />
+          <h2 className="h2 text-center">Kitchen Sink</h2>
+          <Card className='mx-auto' style={{ maxWidth: 286 }}>
+            <Image showSize iWidth={286} iHeight={180} />
             <Card.Body>
               <Card.Title>Card Title</Card.Title>
               <Card.Text>
@@ -68,8 +68,8 @@ const Default = () => {
 
       <Col className="p-3" lg="6">
         <div className="component">
-          <h2 className="h2">Cards title, text, and links</h2>
-          <Card style={{ maxWidth: 286 }}>
+          <h2 className="h2 text-center">Cards title, text, and links</h2>
+          <Card className='mx-auto' style={{ maxWidth: 286 }}>
             <Card.Body>
               <Card.Title>Card Title</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
@@ -165,7 +165,7 @@ const Default = () => {
         <div className="component">
           <h2 className="h2">Images</h2>
           <Card>
-            <Image iWidth={957} iHeight={180} iMaxWidth={"100%"} />
+            <Image showSize iWidth={957} iHeight={180} iMaxWidth={"100%"} />
             <Card.Body>
               <Card.Text>
                 Some quick example text to build on the card title and make up
@@ -181,7 +181,7 @@ const Default = () => {
                 the bulk of the card's content.
               </Card.Text>
             </Card.Body>
-            <Image iWidth={957} iHeight={180} iMaxWidth={"100%"} />
+            <Image showSize iWidth={957} iHeight={180} iMaxWidth={"100%"} />
           </Card>
         </div>
       </Col>
