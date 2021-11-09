@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Default = (props) => {
-  let { iWidth, iHeight, iMaxWidth, iMinHeight, showSize, ...rest } = props;
+  let { iWidth, iHeight, iMaxWidth, iMinHeight, showSize, className="", ...rest } = props;
   iWidth = iWidth || 100;
   iHeight = iHeight || 100;
   iMaxWidth = iMaxWidth || iWidth || "initial";
@@ -11,7 +11,7 @@ const Default = (props) => {
   
   return (
     <ImageStyled
-      className="bg-dark text-light"
+      className={`bg-dark text-light ${className}`}
       {...rest}
       {...{ iMaxWidth, iMinHeight }}
     >
